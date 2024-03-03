@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/art.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Cormorant+Infant:wght@700&family=Inria+Serif&family=Montserrat&family=Roboto+Slab:wght@500&family=Roboto:wght@300&family=Shippori+Mincho+B1:wght@700&display=swap"
+    rel="stylesheet">
+  <title>Art</title>
+</head>
+
+<body>
+  <div class="navbar">
+    <span><a href="./index.html">Tian</a></span>
+    <nav>
+      <div class="dropdown">
+        <a href="index.html#portfolio" class="dropbtn">Portfolio</a>
+        <div class="dropdown-content">
+          <a href="./index.html#web">web</a>
+          <a href="./index.html#poster">poster</a>
+          <a href="./index.html#art">art</a>
+          <a href="./index.html#app">app</a>
+        </div>
+      </div>
+      <a href="./about.html">About</a>
+      <a href="mailto:nanaze1103@gmail.com">Contact</a>
+    </nav>
+  </div>
+
+  <div class="box">
+    <span class="text">Art Design</span>
+    <div class="line-one"></div>
+  </div>
+
+  <div class="content-box">
+    <div class="item">
+      <img src="images/art1.jpg" alt="Image 1">
+      <h4>「ひかり」</h4>
+      <p>procreate - “すっかりくつろぐ”</p>
+    </div>
+    <div class="item">
+      <img src="images/art2.png" alt="Image 2">
+      <h4>「女の子」</h4>
+      <p>procreate - かわいい女の子の画像、キャラクター像などに使用可能。</p>
+    </div>
+    <div class="item">
+      <img src="images/art3.JPG" alt="Image 3">
+      <h4>「夢幻の海」</h4>
+      <p>procreate -
+        "もし夢の中に海が現れたら、こんな感じだろうね。"</p>
+    </div>
+  </div>
+
+  <div class="bottom-box">
+    <div class="bottom-line"></div>
+    <div class="contact-container ">
+      <img src="images/sakura.png" alt="Profile Picture" class="profile-pic">
+      <div class="contact-info">
+        <h3>Let’s connect!</h3>
+        <p></span>YuXin Tian</p>
+        <p>nanaze1103@gmail.com</p>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var navbar = document.querySelector(".navbar");
+
+      window.addEventListener("scroll", function () {
+        if (window.pageYOffset > 100) {
+          navbar.classList.add("show");
+        } else {
+          navbar.classList.remove("show");
+        }
+      });
+    });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+
+      const bottomBox = document.querySelector('.bottom-box');
+
+
+      window.addEventListener('scroll', function () {
+        if (isInViewport(bottomBox)) {
+          bottomBox.classList.add('visible');
+        }
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+
+      const bottomLine = document.querySelector('.bottom-line');
+
+      window.addEventListener('scroll', function () {
+        if (isInViewport(bottomLine) && !bottomLine.classList.contains('visible')) {
+          bottomLine.classList.add('visible');
+        }
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const elementsToAnimateLeft = document.querySelectorAll('.item img');
+      const elementsToAnimateRight = document.querySelectorAll('.item h4, .item p');
+
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.bottom > 0
+        );
+      }
+
+      function checkElementsInViewport() {
+        elementsToAnimateLeft.forEach(el => {
+          if (isInViewport(el) && !el.classList.contains('visible-slide-in-from-left')) {
+            el.classList.add('visible-slide-in-from-left');
+            el.style.opacity = 1;
+            el.style.transform = "translateX(0%)";
+          }
+        });
+
+        elementsToAnimateRight.forEach(el => {
+          if (isInViewport(el) && !el.classList.contains('visible-slide-in-from-right')) {
+            el.classList.add('visible-slide-in-from-right');
+            el.style.opacity = 1;
+            el.style.transform = "translateX(0%)";
+          }
+        });
+      }
+
+      window.addEventListener('scroll', checkElementsInViewport);
+      checkElementsInViewport();
+    });
+
+
+  </script>
+</body>
+
+</html>

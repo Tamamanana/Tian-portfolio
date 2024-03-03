@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Cormorant+Infant:wght@700&family=Inria+Serif&family=Montserrat&family=Roboto+Slab:wght@500&family=Roboto:wght@300&family=Shippori+Mincho+B1:wght@700&display=swap"
+    rel="stylesheet">
+  <title>Yuxin Tian's Portfolio</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="centered-container">
+    <div class="content-wrapper">
+
+      <div class="header">
+        <h1 class="name">hello, i'm Yux<span id="name">i</span>n Tian<span id="dot">.</span></h1>
+      </div>
+
+      <div id="sub-header">
+        UI/UX Designer and Web Designer
+      </div>
+      <div id="content">
+        I enjoy trying various styles of design and have a passion for creating beautiful and delightful experiences.
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="navbar">
+  <span><a href="./index.html">Tian</a></span>
+  <nav>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#about">About</a>
+    <a href="mailto:nanaze1103@gmail.com">Contact</a>
+  </nav>
+</div> -->
+
+  <div class="navbar">
+    <span><a href="./index.html">Tian</a></span>
+    <nav>
+      <div class="dropdown">
+        <a href="#portfolio" class="dropbtn">Portfolio</a>
+        <div class="dropdown-content">
+          <a href="#web">web</a>
+          <a href="#poster">poster</a>
+          <a href="#art">art</a>
+          <a href="#app">app</a>
+        </div>
+      </div>
+      <a href="./about.html">About</a>
+      <a href="mailto:nanaze1103@gmail.com">Contact</a>
+    </nav>
+  </div>
+
+
+
+  <div id="portfolio" class="box slide-in">
+    <span class="text">Portfolio</span>
+    <div class="line-one"></div>
+  </div>
+
+  <div class="text-box" id="web">
+    <p>Web Design</p>
+  </div>
+
+  <div class="flex-container">
+    <div class="portfolio-box">
+      <div class="images-row">
+        <img src="images/kiku1.jpg" alt="Image 1" data-hover-image="images/kiku.png" class="hover-effect">
+
+        <img src="images/cafe.jpg" alt="Image 2" data-hover-image="images/pizza.png" class="hover-effect">
+      </div>
+      <div class="images-row">
+        <img src="images/star1.jpg" alt="Image 3" data-hover-image="images/star.png" class="hover-effect">
+
+        <img src="images/pann.jpg" alt="Image 4" data-hover-image="images/pann.png" class="hover-effect">
+
+      </div>
+      <a href="./web.html" class="btn btn-border">More</a>
+    </div>
+  </div>
+
+  <div class="text-box" id="poster">
+    <p>Poster Design</p>
+  </div>
+
+  <div class="flex-container">
+    <div class="portfolio-box">
+      <div class="images-row">
+        <img src="images/onigiri.png" alt="Poster Design 1" style="width: 30%;">
+        <img src="images/tokyo.png" alt="Poster Design 1" style="width: 30%;">
+      </div>
+      <div class="images-row">
+        <img src="images/onsen.png" alt="Poster Design 2">
+        <img src="images/bl.png" alt="Poster Design 2">
+      </div>
+      <a href="./poster.html" class="btn btn-border">More</a>
+    </div>
+  </div>
+
+  <div class="text-box" id="art">
+    <p>Art Design</p>
+  </div>
+
+  <div class="flex-container art-design">
+    <div class="portfolio-box">
+      <div class="images-row">
+        <img src="images/art1.jpg" alt="Art Design 1">
+        <img src="images/art2.png" alt="Art Design 2">
+        <img src="images/art3.JPG" alt="Art Design 3">
+      </div>
+      <a href="./art.html" class="btn btn-border">More</a>
+    </div>
+  </div>
+
+  <div class="text-box" id="app">
+    <p>APP Design</p>
+  </div>
+
+  <div class="app-design-section">
+    <div class="line"></div>
+    <div class="app-content">
+      <div class="app-content-left">
+        <img src="images/app.png" alt="App Image">
+        <div class="app-text">
+          <p class="text-top">KIKU</p>
+          <p class="text-bottom">FLOWER SHOP</p>
+        </div>
+      </div>
+      <div class="app-content-right">
+        <!-- <button class="round-button">
+          <span class="arrow">&rarr;</span>
+        </button> -->
+        <a href="./app.html" class="round-button">
+          <span class="arrow">&rarr;</span>
+        </a>
+
+      </div>
+    </div>
+    <div class="line"></div>
+  </div>
+
+  <div class="bottom-box">
+    <div class="bottom-line"></div>
+    <div class="contact-container">
+      <img src="images/sakura.png" alt="Profile Picture" class="profile-pic">
+      <div class="contact-info">
+        <h3>Let’s connect!</h3>
+        <p></span>YuXin Tian</p>
+        <p>nanaze1103@gmail.com</p>
+      </div>
+    </div>
+  </div>
+
+  <script>    window.onload = function () {
+      const name = document.getElementById('name');
+      const chars = Array.from(name.textContent);
+      name.textContent = '';
+      chars.forEach((char, i) => {
+        const span = document.createElement('span');
+        span.textContent = char;
+        span.className = 'letter';
+        if (char.toLowerCase() === 'i') {
+          const tl = gsap.timeline({ repeat: -1 });
+          tl.to(span, { rotationX: 540, duration: 2, ease: 'power2.inOut' })
+            .to(span, { rotationX: 1080, duration: 2, ease: 'power2.inOut', delay: 2 });
+        }
+        name.appendChild(span);
+      });
+    };
+
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>

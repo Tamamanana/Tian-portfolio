@@ -1,0 +1,536 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9f9f9;
+  cursor: url("../images/maru.png"), auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+.name {
+  font-size: 85px;
+  margin-bottom: 60px;
+  font-family: "DM Serif Display", serif;
+}
+
+h1 {
+  color: black;
+}
+
+#sub-header {
+  margin-bottom: 20px;
+  color: black;
+  font-family: "DM Serif Display", serif;
+}
+#content {
+  color: black;
+  font-family: "DM Serif Display", serif;
+}
+
+.navbar {
+  position: fixed;
+  top: -60px;
+  width: 100%;
+  color: black;
+  transition: top 0.3s;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 30px;
+  z-index: 1000;
+  font-size: 18px;
+  font-family: "DM Serif Display", serif;
+}
+
+.navbar.show {
+  top: 0;
+}
+
+nav a {
+  padding: 10px;
+  margin: 30px;
+  color: black;
+  text-decoration: none;
+}
+
+span a {
+  text-decoration: none;
+  color: #000;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 2px 2px;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  font-family: "DM Serif Display", serif;
+}
+
+.dropdown:hover .dropdown-content,
+.dropbtn:focus + .dropdown-content {
+  display: block;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.text {
+  color: black;
+  font-size: 40px;
+  margin-right: 50px;
+  font-family: "DM Serif Display", serif;
+}
+
+.line-one {
+  width: 67%;
+  height: 1.5px;
+  background-color: #000;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.portfolio-box {
+  width: 80%;
+  background-color: #eeeded;
+}
+.images-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 80px 0;
+}
+
+.images-row img {
+  width: 38%;
+  height: auto;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.images-row img.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+.text-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36%;
+  margin-top: 150px;
+  margin-bottom: 40px;
+}
+.text-box p {
+  font-size: 25px;
+  color: black;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  font-family: "DM Serif Display", serif;
+}
+
+.text-box.active p {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.art-design .portfolio-box .images-row img {
+  width: 23%;
+  height: auto;
+  object-fit: cover;
+}
+
+.app-design-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.line {
+  width: 80%;
+  height: 1.5px;
+  background-color: #000;
+  margin: 20px 0;
+}
+
+.app-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.app-content-left,
+.app-content-right {
+  flex-grow: 1;
+}
+
+.app-content-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.app-content-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.app-content-left img {
+  max-width: 25%;
+  height: auto;
+  margin-right: 20px;
+}
+
+.app-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #000;
+  font-family: "DM Serif Display", serif;
+}
+
+.text-top {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.text-bottom {
+  font-weight: lighter;
+}
+
+.logo-icon {
+  max-width: 100px;
+  height: auto;
+}
+
+.round-button {
+  border: 1.5px solid #000;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.round-button .arrow {
+  color: #000;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.round-button:hover {
+  background-color: #000;
+}
+
+.round-button:hover .arrow {
+  color: #fff;
+}
+
+.bottom-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 250px;
+}
+
+.bottom-line {
+  width: 20%;
+  height: 1.5px;
+  background-color: #000;
+  margin: 0 auto 40px;
+}
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.contact-info {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.contact-info h3 {
+  margin-bottom: 12px;
+  color: #000;
+  font-size: 25px;
+  font-family: "DM Serif Display", serif;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000;
+  font-family: "DM Serif Display", serif;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+h3:hover {
+  animation: shake 1s ease-in-out;
+}
+
+.letter {
+  display: inline-block;
+  transform-origin: 50% 50%;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-20px);
+  }
+  70% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  90% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#dot {
+  display: inline-block;
+  animation: bounce 2s ease-out;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in.active {
+  animation: slideInFromLeft 0.5s ease-out forwards;
+}
+@keyframes lineSlideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+.line.animate {
+  animation: lineSlideIn 1s ease-out forwards;
+}
+
+.app-content-left img,
+.app-text,
+.app-content-right .round-button {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.app-content-left img.animate,
+.app-text.animate,
+.app-content-right .round-button.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes stretchLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 20%;
+  }
+}
+
+.bottom-line.animate {
+  animation: stretchLine 1s forwards ease-out;
+}
+
+.profile-pic.animate,
+.contact-info.animate {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.profile-pic,
+.contact-info {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 5px;
+    margin: 15px;
+    font-size: 14px;
+  }
+
+  nav a {
+    padding: 5px;
+    margin: 15px;
+  }
+  .text {
+    font-size: 24px;
+  }
+  .text-box p {
+    font-size: 20px;
+  }
+  .text-box {
+    min-width: 50%;
+  }
+}
+
+.images-row img.hover-effect {
+  transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.images-row img.hover-effect:hover {
+  opacity: 0.5;
+  transform: scale(1.05);
+  cursor: url("../images/view.png"), auto;
+}
+
+.flex-container {
+  position: relative;
+}
+
+.portfolio-box {
+  position: relative;
+}
+
+.btn-border {
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+  padding: 5px 30px;
+  text-decoration: none;
+  color: #000;
+  background-color: transparent;
+  font-family: "DM Serif Display", serif;
+}
+
+.btn-border:before,
+.btn-border:after {
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  content: "";
+  transition: all 0.3s;
+  background: #000;
+}
+
+.btn-border:before {
+  top: 0;
+  left: 0;
+}
+
+.btn-border:after {
+  right: 0;
+  bottom: 0;
+}
+
+.btn-border:hover:before,
+.btn-border:hover:after {
+  width: 0;
+}

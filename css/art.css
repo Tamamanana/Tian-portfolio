@@ -1,0 +1,280 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9f9f9;
+  cursor: url("../images/maru.png"), auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.navbar {
+  position: fixed;
+  top: -60px;
+  width: 100%;
+  color: black;
+  transition: top 0.3s;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 30px;
+  z-index: 1000;
+  font-size: 18px;
+  font-family: "DM Serif Display", serif;
+}
+
+.navbar.show {
+  top: 0;
+}
+
+nav a {
+  padding: 10px;
+  margin: 30px;
+  color: black;
+  text-decoration: none;
+}
+
+span a {
+  text-decoration: none;
+  color: #000;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 2px 2px;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  font-family: "DM Serif Display", serif;
+}
+
+.dropdown:hover .dropdown-content,
+.dropbtn:focus + .dropdown-content {
+  display: block;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 5px;
+    margin: 15px;
+    font-size: 14px;
+  }
+
+  nav a {
+    padding: 5px;
+    margin: 15px;
+  }
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+.text {
+  color: black;
+  font-size: 40px;
+  margin-right: 50px;
+  font-family: "DM Serif Display", serif;
+}
+
+.line-one {
+  width: 67%;
+  height: 1.5px;
+  background-color: #000;
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.item img {
+  width: 100%;
+  max-width: 350px;
+  margin-bottom: 10px;
+}
+
+.item h4 {
+  margin-bottom: 5px;
+  font-family: "DM Serif Display", serif;
+  font-size: 22px;
+}
+
+.item p {
+  margin-bottom: 30px;
+  font-family: "DM Serif Display", serif;
+}
+
+.bottom-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 130px;
+}
+
+.bottom-line {
+  width: 20%;
+  height: 1.5px;
+  background-color: #000;
+  margin: 0 auto 40px;
+}
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.contact-info {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.contact-info h3 {
+  margin-bottom: 12px;
+  color: #000;
+  font-size: 25px;
+  font-family: "DM Serif Display", serif;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000;
+  font-family: "DM Serif Display", serif;
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-4px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(4px);
+  }
+}
+
+h3:hover {
+  animation: shake 0.9s ease-in-out;
+}
+
+.bottom-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes stretchLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 20%;
+  }
+}
+
+.bottom-line.visible {
+  animation: stretchLine 1s forwards;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.box {
+  opacity: 0;
+  animation: slideInFromLeft 0.5s ease-out forwards;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.item img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-out;
+}
+
+.item img,
+.item h4,
+.item p {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.visible-slide-in-from-left {
+  animation: slideInFromLeft 1s forwards;
+}
+
+.visible-slide-in-from-right {
+  animation: slideInFromRight 1s forwards;
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/poster.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Cormorant+Infant:wght@700&family=Inria+Serif&family=Montserrat&family=Roboto+Slab:wght@500&family=Roboto:wght@300&family=Shippori+Mincho+B1:wght@700&display=swap"
+    rel="stylesheet">
+  <title>Poster</title>
+</head>
+
+<body>
+  <div class="navbar">
+    <span><a href="./index.html">Tian</a></span>
+    <nav>
+      <div class="dropdown">
+        <a href="index.html#portfolio" class="dropbtn">Portfolio</a>
+        <div class="dropdown-content">
+          <a href="./index.html#web">web</a>
+          <a href="./index.html#poster">poster</a>
+          <a href="./index.html#art">art</a>
+          <a href="./index.html#app">app</a>
+        </div>
+      </div>
+      <a href="./about.html">About</a>
+      <a href="mailto:nanaze1103@gmail.com">Contact</a>
+    </nav>
+  </div>
+
+  <div class="box">
+    <span class="text">Poster Design</span>
+    <div class="line-one"></div>
+  </div>
+
+
+  <div class="content-wrapper">
+    <div class="item-box">
+      <img src="images/onigiri.png" alt="Image 1">
+      <div class="text-section">
+        <h4>「ふわふわおにぎりランド」</h4>
+        <p>　制作時間：1.5日</p>
+        <p>デザインポイント：これは飲食業向けのポスターで、可愛らしくて面白いスタイルを基本とし、同時にすべての味をポスターに反映させて、お客様が面白いと感じると同時に、迅速に情報をキャッチできるようにしています。</p>
+      </div>
+    </div>
+    <div class="item-box">
+      <img src="images/tokyo.png" alt="Image 2">
+      <div class="text-section">
+        <h4>「Discover Your Tokyo」</h4>
+        <p>　制作時間：2日</p>
+        <p>
+          デザインポイント：自分のアイデアに基づいてデザインされたポスターです。初めて東京に来た時の印象は、電車の路線が多く、都市が多様性に富んでいるということでした。そのため、「TOKYO」フォントデザインポイントは、東京の高層ビルを模倣し、多彩な色で東京の多様性を表現しています。赤いまるは日本の国旗の象徴を取り入れつつ、東京の中心線も表しています。色は日本の電車の路線色を使用しています。
+        </p>
+      </div>
+    </div>
+    <div class="item-box">
+      <img src="images/onsen.png" alt="Image 3">
+      <div class="text-section">
+        <h4>「HAKONE ONSEN」</h4>
+        <p>制作時間：2時間</p>
+        <p>
+          デザインポイント：箱根温泉のバナーです。人々に快適で涼しい感覚を与えるために、淡色を使用しました。また、温泉の水の波紋を模倣するために不規則な形の線を使用しています。顧客が最初に快適さを感じるようにし、直接温泉の情報をキャッチできるようにします。
+        </p>
+      </div>
+    </div>
+    <div class="item-box">
+      <img src="images/bl.png" alt="Image 4">
+      <div class="text-section">
+        <h4>「Boulangerie」</h4>
+        <p>制作時間：１時間</p>
+        <p>
+          デザインポイント：「Boulangerie」学校のWebデザインの課題に基づいたバナーデザインです。カバーには人気商品を追加し、顧客が大まかなパンの種類やパン屋の雰囲気をすぐに理解できるようにします。店への情報は最下部にあり、フォントの大きさを利用して顧客の注意を引き、情報を迅速に伝えます。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-box">
+    <div class="bottom-line"></div>
+    <div class="contact-container ">
+      <img src="images/sakura.png" alt="Profile Picture" class="profile-pic">
+      <div class="contact-info">
+        <h3>Let’s connect!</h3>
+        <p></span>YuXin Tian</p>
+        <p>nanaze1103@gmail.com</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var navbar = document.querySelector(".navbar");
+
+      window.addEventListener("scroll", function () {
+        if (window.pageYOffset > 100) {
+          navbar.classList.add("show");
+        } else {
+          navbar.classList.remove("show");
+        }
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+
+      const bottomBox = document.querySelector('.bottom-box');
+
+
+      window.addEventListener('scroll', function () {
+        if (isInViewport(bottomBox)) {
+          bottomBox.classList.add('visible');
+        }
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+
+      const bottomLine = document.querySelector('.bottom-line');
+
+      window.addEventListener('scroll', function () {
+        if (isInViewport(bottomLine) && !bottomLine.classList.contains('visible')) {
+          bottomLine.classList.add('visible');
+        }
+      });
+    });
+
+  </script>
+</body>
+
+</html>

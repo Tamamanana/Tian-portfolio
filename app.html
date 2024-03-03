@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/app.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Cormorant+Infant:wght@700&family=Inria+Serif&family=Montserrat&family=Roboto+Slab:wght@500&family=Roboto:wght@300&family=Shippori+Mincho+B1:wght@700&display=swap"
+    rel="stylesheet">
+  <title>App</title>
+</head>
+
+<body>
+  <div class="navbar">
+    <span><a href="./index.html">Tian</a></span>
+    <nav>
+      <div class="dropdown">
+        <!-- <a href="#portfolio" class="dropbtn">Portfolio</a> -->
+        <a href="index.html#portfolio" class="dropbtn">Portfolio</a>
+
+        <div class="dropdown-content">
+          <a href="./index.html#web">web</a>
+          <a href="./index.html#poster">poster</a>
+          <a href="./index.html#art">art</a>
+          <a href="./index.html#app">app</a>
+        </div>
+      </div>
+      <a href="./about.html">About</a>
+      <a href="mailto:nanaze1103@gmail.com">Contact</a>
+    </nav>
+  </div>
+
+
+  <div class="sidebar-menu">
+    <a href="#overview" class="menu-item">「概述」</a>
+    <a href="#uiux" class="menu-item">「UI/UXデザインとコア機能」</a>
+    <a href="#user-research" class="menu-item">「ユーザ調査」</a>
+    <a href="#prototype-design" class="menu-item">「プロトタイプデザイン」</a>
+    <a href="#design-concept" class="menu-item">「デザインコンセプト」</a>
+    <a href="#reflection-keypoints" class="menu-item">「リフレクション/キーポイント」</a>
+  </div>
+
+
+  <div class="container fade-in-animation">
+    <h1>KIKU</h1>
+  </div>
+
+  <div class="image-box">
+    <!-- Replace 'path_to_your_image.jpg' with the actual path to your image -->
+    <img src="images/app-iphone.png" alt="Descriptive Text for Image">
+  </div>
+
+  <div class="box" id="overview">
+    <h4>「概述」</h4>
+    <h5>⚫︎背景</h5>
+    <p>
+      「KIKU」アプリを設計した最初の理由は、自分が花束が好きだったからですが、花束の種類が多岐にわたり、どのようにして花の種類を識別し、花束をより良くケアするかは、私のような花束初心者が直面する問題でした。<br>
+      同時に、普段忙しい人たちが、どのようにしてより迅速かつ便利に花束を購入できるか等、これらの問題を解決し、より温かく便利な花束サービスを提供するために、設計しました。
+    </p>
+  </div>
+
+  <div class="feature-box" id="uiux">
+    <h4>「UI/UXデザインとコア機能」</h4>
+    <h5>⚫︎ログイン画面</h5>
+    <p>デザインポイント：基本色を黒とし、白をアクセントに使用します。円形の線を用いて花びらのイメージを表現します。</p>
+    <p>ユーザーエクスペリエンス：ログイン画面では、ユーザーがアプリの名前とブランドを迅速に記憶し、印象を深めることができます。</p>
+    <div class="image-row">
+      <img src="images/touroku.png" alt="Image Description 1">
+    </div>
+  </div>
+
+  <div class="feature-box">
+    <h5>⚫︎花束の閲覧および購入画面</h5>
+    <p>デザインポイント：製品リストを明確に表示し、花束の画像、名前、価格を含めます。</p>
+    <p>ユーザーエクスペリエンス：様々なフィルター条件および検索機能をサポートし、ユーザーが必要な花束を迅速に見つけることができます。</p>
+    <div class="image-row">
+      <img src="images/shopping.png" alt="Image Description 1" style="width: 100%; height: auto;">
+    </div>
+  </div>
+
+  <div class="feature-box">
+    <h5>⚫︎花束の識別とケア</h5>
+    <p>デザインポイント：AIによる花束識別機能を統合し、ユーザーは写真を撮って花束の画像をアップロードすることで、アプリが花束の詳細情報とケアガイドを表示します。</p>
+    <p>ユーザーエクスペリエンス：各種の花束に対して詳細なケアガイドを提供し、水やりの頻度、光の要求などを含めます。ユーザーはこれらの情報を保存し、ケアのリマインダーを設定することができます。</p>
+    <div class="image-row">
+      <img src="images/care.png" alt="Image Description 1" style="width: 75%; height: auto;">
+    </div>
+  </div>
+  <!-- 复制上面的盒子两次以创建三个一样的盒子 -->
+
+  <div class="user-research-section" id="user-research">
+    <h4 class="user-research-title">「ユーザ調査」</h4>
+    <div class="user-research-content">
+      <div class="research-item">
+        <img src="images/30.png" alt="图片描述" class="research-image">
+        <div class="research-text">
+          <p><strong>エミリー（Emily） 30歳</strong><br>
+
+            <strong>背景</strong><br>
+            エミリーは都心で働く忙しいマーケティングマネージャーです。彼女は生活を愛し、自宅やオフィスに生花を飾って空間の美しさと気分を向上させることを好みます。<br>
+            <strong>ニーズ</strong><br>オンラインで手軽に生花を購入し、カスタマイズする方法を探しています。同時に、これらの花を新鮮で美しい状態に保つためのケア方法を迅速に学びたいと考えています。<br>
+            <strong>使用シーン</strong><br>
+            大切な祝日に親しい友人や家族へのプレゼントとして花束を選んだり、自分の生活空間に定期的に生花を購入したりします。
+          </p>
+        </div>
+      </div>
+
+      <div class="user-research-section">
+        <div class="user-research-content">
+          <div class="research-item">
+            <img src="images/32.png" alt="图片描述" class="research-image">
+            <div class="research-text">
+              <p><strong>ジャック（Jack） 32歳</strong><br>
+
+                <strong>背景</strong><br>
+                ジャックはアプリ開発者で、新技術やAI機能に特に興味を持っています。彼は頻繁に生花を購入するわけではありませんが、花束を識別し、その世話のアドバイスを提供できる技術に非常に好奇心を持っています。<br>
+                <strong>ニーズ</strong><br>技術駆動の機能に関心があり、特にAIを使用して花を識別し、ケアガイドを提供する機能に関心があります。<br>
+                <strong>使用シーン</strong><br>
+                アプリの花束識別機能を使用して、たまに受け取る花束の情報を知り、それらの世話をして花の寿命を延ばす方法を学びます。
+              </p>
+            </div>
+          </div>
+
+          <div class="user-research-section">
+            <div class="user-research-content">
+              <div class="research-item">
+                <img src="images/25.png" alt="图片描述" class="research-image">
+                <div class="research-text">
+                  <p><strong>サラ（Sara） 25歳</strong><br>
+
+                    <strong>背景</strong><br>
+                    サラはフリーランスであり、ソーシャルメディアインフルエンサーでもあります。彼女は生活の美学やDIYプロジェクトを頻繁に共有しており、ユニークでパーソナライズされた花束デザインに興味を持っています。これは、撮影スペースを飾り、写真の美しさを高めるためです。<br>
+                    <strong>ニーズ</strong><br>個性的なカスタマイズ花束サービスを提供するアプリを探しており、唯一無二のフラワーアート作品を作成し、共有することができます。<br>
+                    <strong>使用シーン</strong><br>
+                    特別なソーシャルメディアコンテンツの撮影のために、特徴的な花束をカスタマイズする必要があります。または、独自のクリエイティブなフラワーアートを自分で作る方法を学びます。
+                  </p>
+                </div>
+              </div>
+
+              <div class="user-research-section">
+                <div class="user-research-content">
+                  <div class="research-item">
+                    <img src="images/65.png" alt="图片描述" class="research-image">
+                    <div class="research-text">
+                      <p><strong>トム（Tom） 65歳</strong><br>
+
+                        <strong>背景</strong><br>
+                        トムは退職した教師で、現在は自分の趣味にもっと多くの時間を費やすことができます。それには園芸も含まれます。彼はフラワーデザインに興味があり、自分で花束を作る方法を学びたいと思っています。<br>
+                        <strong>ニーズ</strong><br>サイトまたはアプリを通じてフラワーアレンジメントの技術を学び、オンラインまたはオフラインのフラワーアレンジメント講座に参加し、他のフラワーアレンジメント愛好家と交流したいと考えています。<br>
+                        <strong>使用シーン</strong><br>
+                        空いた時間にフラワーアレンジメントのチュートリアルを閲覧したり、フラワーアレンジメントのワークショップに登録したりして、フラワーアレンジメントを新しい趣味として楽しみます。
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="centered-container" id="prototype-design">
+                    <h4>「プロトタイプデザイン」</h4>
+                    <img src="images/yuan.png" alt="Descriptive Text for Image">
+                  </div>
+
+                  <div class="centered-container" id="design-concept">
+                    <h4>「デザインコンセプト」</h4>
+                    <img src="images/design concept.png" alt="Descriptive Text for Image">
+                  </div>
+
+                  <div class="box" id="reflection-keypoints">
+                    <h4>「リフレクション/キーポイント」</h4>
+                    <p>
+                      「KIKU」アプリの設計過程では花の種類を識別し、適切にケアする方法を理解することの難しさ、および忙しい日常生活の中で容易に花束を購入する方法の欠如に関連しています。プロジェクトを通じて、ユーザーのニーズを理解し、それらを解決するための機能を組み込むことの重要性を再認識しました。<br>また、デザインとユーザーエクスペリエンスの改善は継続的なプロセスであり、ユーザーフィードバックを積極的に求め、それに基づいてアプリを進化させることが重要です。
+                    </p>
+                  </div>
+
+                  <div class="bottom-box">
+                    <div class="bottom-line"></div>
+                    <div class="contact-container ">
+                      <img src="images/sakura.png" alt="Profile Picture" class="profile-pic">
+                      <div class="contact-info">
+                        <h3>Let’s connect!</h3>
+                        <p></span>YuXin Tian</p>
+                        <p>nanaze1103@gmail.com</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                      var navbar = document.querySelector(".navbar");
+
+                      window.addEventListener("scroll", function () {
+                        if (window.pageYOffset > 100) {
+                          navbar.classList.add("show");
+                        } else {
+                          navbar.classList.remove("show");
+                        }
+                      });
+                    });
+
+                    document.addEventListener("DOMContentLoaded", function () {
+                      const bottomBox = document.querySelector('.bottom-box');
+                      const bottomLine = document.querySelector('.bottom-line');
+
+
+                      function isInViewport(element) {
+                        const rect = element.getBoundingClientRect();
+                        return (
+                          rect.top >= 0 &&
+                          rect.left >= 0 &&
+                          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                        );
+                      }
+
+
+                      window.addEventListener('scroll', function () {
+                        if (isInViewport(bottomBox)) {
+                          bottomBox.classList.add('visible');
+                        }
+                      });
+
+
+                      window.addEventListener('scroll', function () {
+                        if (isInViewport(bottomLine) && !bottomLine.classList.contains('visible')) {
+                          bottomLine.classList.add('visible');
+                        }
+                      });
+                    });
+
+                  </script>
+
+</body>
+
+</html>
