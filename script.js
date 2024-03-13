@@ -1,22 +1,63 @@
+// document.addEventListener("DOMContentLoaded", function () {
+//   let isEnglish = true;
+
+//   setInterval(function () {
+//     var subHeaderElement = document.getElementById("sub-header");
+//     var contentElement = document.getElementById("content");
+
+//     if (isEnglish) {
+//       subHeaderElement.innerHTML = "UX/UIデザイナー & Webデザイナー";
+//       contentElement.innerHTML =
+//         "さまざまなスタイルのデザインを試すことが好きで、美しく楽しい体験を創出することに熱心です。";
+//       isEnglish = false;
+//     } else {
+//       subHeaderElement.innerHTML = "UI/UX Designer and Web Designer";
+//       contentElement.innerHTML =
+//         "I enjoy trying various styles of design and have a passion for creating beautiful and delightful experiences.";
+//       isEnglish = true;
+//     }
+//   }, 4000);
+// });
+
 document.addEventListener("DOMContentLoaded", function () {
   let isEnglish = true;
 
-  setInterval(function () {
+  // Function to change content with fade effects
+  function changeContent() {
     var subHeaderElement = document.getElementById("sub-header");
     var contentElement = document.getElementById("content");
 
-    if (isEnglish) {
-      subHeaderElement.innerHTML = "UX/UIデザイナー & Webデザイナー";
-      contentElement.innerHTML =
-        "さまざまなスタイルのデザインを試すことが好きで、美しく楽しい体験を創出することに熱心です。";
-      isEnglish = false;
-    } else {
-      subHeaderElement.innerHTML = "UI/UX Designer and Web Designer";
-      contentElement.innerHTML =
-        "I enjoy trying various styles of design and have a passion for creating beautiful and delightful experiences.";
-      isEnglish = true;
-    }
-  }, 3000);
+    // Apply fadeOut class
+    subHeaderElement.classList.add("fadeOut");
+    contentElement.classList.add("fadeOut");
+
+    // Listen for animation end to change the content and apply fadeIn
+    subHeaderElement.addEventListener(
+      "animationend",
+      function () {
+        if (isEnglish) {
+          subHeaderElement.innerHTML = "UI/UXデザイナー & Webデザイナー";
+          contentElement.innerHTML =
+            "さまざまなスタイルのデザインを試すことが好きで、美しく楽しい体験を創出することに熱心です。";
+        } else {
+          subHeaderElement.innerHTML = "UI/UX Designer and Web Designer";
+          contentElement.innerHTML =
+            "I enjoy trying various styles of design and have a passion for creating beautiful and delightful experiences.";
+        }
+        subHeaderElement.classList.remove("fadeOut");
+        contentElement.classList.remove("fadeOut");
+
+        subHeaderElement.classList.add("fadeIn");
+        contentElement.classList.add("fadeIn");
+
+        // Toggle the language after updating the content
+        isEnglish = !isEnglish;
+      },
+      { once: true }
+    ); // Ensure the event listener is removed after execution
+  }
+
+  setInterval(changeContent, 4500);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
